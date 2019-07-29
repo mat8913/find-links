@@ -1,0 +1,37 @@
+cabal-version:       2.0
+name:                find-links
+version:             0.1.0.0
+synopsis:            Find links in text
+description:         Find links within text
+homepage:            https://github.com/mat8913/find-links
+bug-reports:         https://github.com/mat8913/find-links/issues
+license:             GPL-3
+license-file:        LICENSE
+author:              Matthew Harm Bekkema
+maintainer:          id@mbekkema.name
+copyright:
+category:            Text
+build-type:          Simple
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     FindLinks
+  ghc-options:         -Wall
+  build-depends:       base ^>=4.12.0.0
+                     , modern-uri ^>= 0.3.0.1
+                     , text ^>= 1.2.3.1
+                     , megaparsec ^>= 7.0.5
+  default-language:    Haskell2010
+
+executable text-to-html
+  main-is:             Main.hs
+  default-extensions:  PartialTypeSignatures
+  ghc-options:         -Wall -threaded -rtsopts -with-rtsopts=-N -fno-warn-partial-type-signatures
+  build-depends:       base
+                     , find-links
+                     , modern-uri
+
+                     , type-of-html ^>= 1.5.0.0
+                     , bytestring ^>= 0.10.10.0
+  hs-source-dirs:      app
+  default-language:    Haskell2010
