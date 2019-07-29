@@ -9,7 +9,7 @@ license:             GPL-3
 license-file:        LICENSE
 author:              Matthew Harm Bekkema
 maintainer:          id@mbekkema.name
-copyright:
+copyright:           2019 Matthew Harm Bekkema
 category:            Text
 build-type:          Simple
 
